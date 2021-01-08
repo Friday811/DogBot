@@ -17,7 +17,7 @@ module.exports = {
             });
 
             let url = args[0];
-            if (!url.startsWith('http://') || !url.startsWith('https://')) {
+            if (!url.startsWith('http://') && !url.startsWith('https://')) {
                 url = 'http://' + url;
             }
 
