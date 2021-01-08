@@ -8,7 +8,7 @@ module.exports = {
     usage: '[url to fetch]',
     async execute(message, args) {
         const run = async() => {
-            const browser = await puppeteer.launch();
+            const browser = await puppeteer.launch({ executablePath: 'chromium-browser' });
             const page = await browser.newPage();
 
             await page.setViewport({
